@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/Isaac-Tait/TailwindCSS_Projects"
+    },
   "dependencies": {
     "tailwindcss": "^1.7.3"
   },
@@ -10,6 +14,6 @@
   "scripts": {
     "build-css": "tailwindcss build src/styles.css -o public/styles.css"
   },
-  "author": "",
+  "author": "Isaac M. Tait",
   "license": "ISC"
 }
