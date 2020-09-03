@@ -7,51 +7,78 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="styles.css" rel="stylesheet">
     </head>
-    <div class="bg-topography-pattern"> <!--If I change this line to bg-gray-400 for example suddenly the background changes. Why does my topography background not load?-->
-        <div>
-            <nav class="bg-red-800 w-full">
-                <h1 class="text-6xl ml-1/2 pl-8">mountainTopCoding(&#9968;);</h1>
-                <list>
-                    <ul class="p-4">One (1)</ul>
-                    <ul class="p-4">Two (2)</ul>
-                    <ul class="p-4">Three (3)</ul>
-                </list>
-            </nav>
-        </div>
-    
-        <div>
-            <img 
-                class="mx-auto h-40 w-40 rounded-full"
-                src="img/IsaacPortrait.jpg"
-                alt="Isaac Tait's Portrait"
-            >
-        </div>
-        <div class="flex">
-            <p class="w-1/3 m-5">
-                Lorem ipsum dolor sit amet, pro tibique tacimates cu, ad vide minimum concludaturque mei. Vel vivendum definiebas ad. Mel at harum labitur, ea aperiam virtute atomorum eam. Ei quot detracto vix.
-                Mazim feugait elaboraret ut ius. Usu eleifend deseruisse instructior ea. Quo debet sanctus eu, viris torquatos vix cu. Volumus vituperatoribus cum in, at quod tempor virtute nec. Erat nemore no sit, ex vel stet legere appareat, eu per doming labore equidem.
-                Id officiis laboramus comprehensam mel, sint vocent facilis cu est, quot postea vivendum eum et. At eos malis mucius intellegam. Vim ad esse erroribus. Duo sale suavitate at. Percipitur theophrastus te vim, natum errem id usu, usu in meis harum praesent. Ad sapientem voluptaria mea.
-                Ex mei primis malorum quaerendum, et aeque vocent nam. Lorem libris nusquam te nec. Cu nam numquam fabellas lobortis. Has phaedrum invenire disputationi ex.
-                Adipisci reformidans eos at. Omnis prima atqui vix ad, has ut legere scripta convenire. Cu duo suas saepe, tempor timeam sit id. Nam suas mutat ad, ut probo copiosae definitionem nec. Brute aperiri delenit an eum.
-            </p>
-            <div class="w-40 m-8 border-4">
-                <h3>Enter your kilometer splits to convert the time into mile splits...</h3>
-                    <input id="minutes-time" type="text" placeholder="Minutes" />
-                    <input id="seconds-time" type="text" placeholder="Seconds" />
-                        <br />
-                        <br />
-                    <button 
-                        type="button" 
-                        onclick="userInput();"
-                        placeholder="Submit"
-                    > Submit</button>
-                <h3>Your mile split time is <span id="result"></span></h3>
+    <body>
+        <div class="flex flex-col bg-topography-pattern"> <!--If I change this line to bg-gray-400 for example suddenly the background changes. Why does my topography background not load?-->
+            <div>
+                <nav class="bg-red-800 w-full">
+                    <p class="text-6xl ml-1/2 pl-8">Tailwind Scratchpad</p>
+                    <list>
+                        <ul class="flex border-b">
+                            <li class="-mb-px mr-1">
+                              <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-yellow-700 font-semibold" href="#">Home</a>
+                            </li>
+                            <li class="mr-1">
+                              <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#">About</a>
+                            </li>
+                            <li class="mr-1">
+                              <a class="bg-white inline-block py-2 px-4 text-green-500 hover:text-blue-800 font-semibold" href="#">Contact</a>
+                            </li>
+                            <li class="mr-1">
+                              <a class="bg-white inline-block py-2 px-4 text-red-500 font-semibold" href="#">Stoicism</a>
+                            </li>
+                          </ul>
+                    </list>
+                </nav>
             </div>
+        
+            <div>
+                <img 
+                    class="mx-auto h-40 w-40 rounded-md pt-4"
+                    src="img/IsaacPortrait.jpg"
+                    alt="Isaac Tait's Portrait"
+                >
+            </div>
+            <div class="flex">
+                <p class="w-1/3 m-5">
+                    Lorem ipsum dolor sit amet, pro tibique tacimates cu, ad vide minimum concludaturque mei. Vel vivendum definiebas ad. Mel at harum labitur, ea aperiam virtute atomorum eam. Ei quot detracto vix.
+                    Mazim feugait elaboraret ut ius. Usu eleifend deseruisse instructior ea. Quo debet sanctus eu, viris torquatos vix cu. Volumus vituperatoribus cum in, at quod tempor virtute nec. Erat nemore no sit, ex vel stet legere appareat, eu per doming labore equidem.
+                    Id officiis laboramus comprehensam mel, sint vocent facilis cu est, quot postea vivendum eum et. At eos malis mucius intellegam. Vim ad esse erroribus. Duo sale suavitate at. Percipitur theophrastus te vim, natum errem id usu, usu in meis harum praesent. Ad sapientem voluptaria mea.
+                    Ex mei primis malorum quaerendum, et aeque vocent nam. Lorem libris nusquam te nec. Cu nam numquam fabellas lobortis. Has phaedrum invenire disputationi ex.
+                    Adipisci reformidans eos at. Omnis prima atqui vix ad, has ut legere scripta convenire. Cu duo suas saepe, tempor timeam sit id. Nam suas mutat ad, ut probo copiosae definitionem nec. Brute aperiri delenit an eum.
+                </p>
+            </div>
+            <div>
+                <div class="ml-6">
+                    <p class="text-lg">Enter your kilometer splits to convert the time into mile splits...</p>
+                        <input 
+                            class="border-gray-400 border-4"
+                            id="minutes-time" 
+                            type="text" 
+                            placeholder="Minutes"
+                        />
+                        <input 
+                            class="border-gray-400 border-4 mt-2"
+                            id="seconds-time" 
+                            type="text" 
+                            placeholder="Seconds"
+                        />
+                            <br />
+                            <br />
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            type="button" 
+                            onclick="userInput();"
+                            placeholder="Submit"
+                        > Submit</button>
+                    <p class="font-bold pt-4">Your mile split time is <span id="result"></span></p>
+                </div>
+            </div>
+            <div class="bg-red-800 w-screen">
+                <h1 class="text-xl text-left font-extrabold p-4 m-4">Footer</h1>
+                <p class="text-right text-s pr-4">Another 
+                    <a href="https://www.mountaintopcoding.com" target="_blank" class="text-blue-600" rel="noopener noreferrer">mountainTopCoding(<span role="img" aria-label="mountain with snow-cap">&#127956;</span>);</a> project</p>
+            </div>
+            <script src="index.js" async defer></script>
         </div>
-        <div class="bg-red-800 w-screen">
-            <h1 class="text-xl text-center p-4 m-4">Footer</h1>
-            <p class="text-right text-s pr-4">Another mountainTopCoding(&#9968;); project</p>
-        </div>
-        <script src="index.js" async defer></script>
-    </div>
+    </body>
 </html>
